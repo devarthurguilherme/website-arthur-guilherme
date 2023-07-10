@@ -548,6 +548,12 @@ section .hard-skills {
   background-image: url(../imgs/Project_E-commerce_Sass.jpg);
   background-size: cover;
 }
+.card .project05 {
+  background-image: url(../imgs/Project_Weather_now.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .card .card__project-image {
   height: 13rem;
   position: relative;
@@ -586,7 +592,7 @@ section .hard-skills {
   color: #EFD81D;
 }
 .card .card__project-content .card__project-content-description .card__project-content-description__technologies .fa-brands.fa-react {
-  color: #5ED3F3;
+  color: #1e98b9;
 }
 .card .card__project-content .card__project-content-description .card__project-content-description__technologies .fa-brands.fa-sass {
   color: #C76494;
