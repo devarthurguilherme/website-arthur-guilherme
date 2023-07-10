@@ -1,0 +1,232 @@
+@use '../1-base/_variables'
+@use '../2-layouts/layout-mixins'
+
+.header
+    width: 100%
+    position: relative
+
+.header__top-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-align: center
+    height: 7rem
+    padding: variables.$paddingDefault
+    color: variables.$color4Pallet
+    position: fixed
+    width: 100%
+    max-width: 120rem
+    z-index: 99
+    margin: 0 auto
+    transition: .4s
+    top: 0
+    letf: 0
+
+    .header__menu-toggle, .header__dark-mode
+        font-size: variables.$sizeNavigationIcons
+        
+        input[type="checkbox"]
+            display: none
+
+        .bi-moon-fill
+            cursor: pointer
+
+        .bi-brightness-high-fill
+            display: none
+            cursor: pointer
+
+        
+    .header__menu-toggle
+        cursor: pointer
+
+    .header__title
+        color: variables.$color4Pallet
+
+.header__top-header--stick
+    background-color: variables.$darkGreyTransparent
+    height: 5rem
+    transition: .4s
+    box-shadow: 0 .1rem 2rem variables.$color5Pallet
+
+.header__navigation-menu
+    height: 100vh
+    width: 65%
+    color: variables.$color4Pallet
+    z-index: 2
+    position: fixed
+    background: variables.$darkGreyTransparent
+    overflow-y: auto
+    left: -600rem
+    transition: .4s
+    padding-top: 2rem
+    padding-right: 1rem
+    box-shadow: 0 .1rem .5rem variables.$color5Pallet
+    bottom: 0
+    top: 0
+    z-index: 100
+
+    @include layout-mixins.tablet
+        width: 40%
+        
+    
+    .navigation-menu__items
+        font-size: variables.$sizeNavigationIcons
+        border-bottom: .2rem solid variables.$colorText
+
+    .toClose-Box
+        margin-bottom: 3rem
+
+        #toClose-sideMenu
+            margin: 2rem
+            cursor: pointer
+            transition: .4s
+            color: variables.$color4Pallet
+
+            &:hover
+                color: variables.$color2Pallet
+
+    .item-navigation
+        padding: 2rem
+        cursor: pointer
+        display: block
+        transition: .4s
+
+        &:hover
+            border-left: .5rem solid variables.$color2Pallet
+            border-radius: .1rem
+            letter-spacing: .1rem
+            
+
+        i
+            margin-right: 2rem
+
+
+    .navigation-menu__react-developer
+        padding: 2rem
+        border-bottom: .2rem solid variables.$colorText
+        border-radius: .2rem
+
+        .react-developer__subtitle
+            font-size: variables.$sizeTitleH2
+            color: variables.$color4Pallet 
+            font-family: 'Roboto', sans-serif
+            font-weight: bold
+            transition: .4s
+            text-shadow: 0 0 .1rem variables.$color4Pallet
+
+            &:hover, &active
+                @include layout-mixins.hover_active
+                
+    .navigation-menu__hard-skills
+        padding: 1rem
+
+        .hard-skills
+            color: variables.$color5Pallet
+            font-size: clamp(3.6rem, 3.8vw, 4.3rem)
+            display: flex
+            flex-wrap: wrap
+            width: 100%
+            justify-content: space-around
+            align-items: center
+            width: 100%
+
+            i
+                padding: 2rem
+                
+.header__top-header--desktop
+    display: none
+
+    .desktop-header__title
+        font-size: variables.$sizeTitleH3 
+
+    .desktop__navigation-menu__items
+        display: flex
+        justify-content: space-between
+        width: 40%
+        
+        .desktop-item-navigation
+            font-size: variables.$sizeNavigationIcons
+            color: variables.$color4Pallet 
+            font-family: 'Roboto', sans-serif
+            font-weight: bold
+            transition: .4s
+            text-shadow: 0 0 .1rem variables.$color4Pallet
+
+            &:checked
+                color: red
+
+            &:hover
+                @include layout-mixins.hover_active
+
+    
+    @include layout-mixins.desktop
+        display: flex
+        
+
+
+.header__top-header--mobile
+    @include layout-mixins.desktop
+        display: none
+
+//Change Theme
+.change-theme
+    #container
+        .header
+            .header__top-header, .header__top-header--desktop,
+                .desktop-header__title, .desktop-item-navigation
+                    color: variables.$colorTextLight
+
+            .header__dark-mode
+                .bi-moon-fill
+                    display: none
+                    cursor: pointer
+
+                .bi-brightness-high-fill
+                    display: block
+                    color: variables.$colorTextLight
+
+            .header__top-header--mobile
+                .header__menu-toggle, .header__title
+                    color: variables.$colorTextLight
+        
+            .header__top-header--stick
+                background-color: variables.$lightGreyTransparent
+                height: 5rem
+                transition: .4s
+                box-shadow: 0 .1rem 2rem variables.$colorTextLight
+
+        .header__navigation-menu
+            background-color: variables.$lightGreyTransparent
+            box-shadow: 0 .1rem 2rem variables.$colorTextLight
+
+            .navigation-menu__items
+                border-bottom: .2rem solid variables.$colorTextLight
+                
+                .toClose-Box
+                    #toClose-sideMenu
+                        color: variables.$colorTextLight
+
+                        &:hover
+                            color: variables.$color1Pallet
+
+                .item-navigation
+                    color: variables.$colorTextLight
+
+                    &:hover
+                        border-left: .5rem solid variables.$colorTextLight
+
+                    i
+                        color: variables.$colorTextLight
+
+                
+            .navigation-menu__react-developer
+                border-bottom: .2rem solid variables.$colorTextLight
+                
+                .react-developer__subtitle
+                    color: variables.$colorTextLight
+
+            
+            .navigation-menu__hard-skills
+                .hard-skills
+                    i
+                        color: variables.$color2Pallet

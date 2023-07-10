@@ -1,0 +1,53 @@
+@use '../1-base/_variables'
+@use 'layout-mixins'
+
+section
+    padding: variables.$sectionPadding
+    color: variables.$colorText
+    
+    .text-section__title
+        font-size: variables.$sizeTitleH2
+        text-align: center
+        margin-bottom: 1.5rem
+
+    .text-section__subtitle
+        font-size: variables.$sizeText
+        text-align: center
+        margin-bottom: 1.8rem
+
+    .text-section__paragraph
+        font-size: variables.$sizeText
+        text-align: justify
+        margin-bottom: 1.5rem
+
+    .text-section__subtitle__Arthur
+        font-size: variables.$sizeTitleH3
+        text-align: left
+        margin-bottom: 1.8rem
+
+        .highlight
+            font-size: variables.$sizeTitleH1
+            color: variables.$color2Pallet
+
+    .hard-skills
+        font-size: 4rem
+        text-align: center
+        color: variables.$color5Pallet
+
+#portfolio
+    padding: 0
+    padding-top: 3rem
+    @include layout-mixins.desktop
+        padding-top: 6rem 
+
+.section__container__skills
+    @include layout-mixins.tablet
+        display: flex
+        justify-content: space-between
+        
+
+        .section__text-section
+            width: 64%
+
+        .section__hard-skills
+            width: 35%

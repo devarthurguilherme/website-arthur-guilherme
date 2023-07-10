@@ -1,0 +1,12 @@
+@use '../1-base/_variables'
+
+@mixin hover_active
+    text-shadow: 0 0 3rem variables.$color2Pallet
+
+@mixin tablet
+    @media (min-width: 480px)
+        @content
+
+@mixin desktop
+    @media (min-width: 960px)
+        @content

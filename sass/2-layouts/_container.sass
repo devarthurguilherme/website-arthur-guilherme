@@ -1,0 +1,16 @@
+@use 'layout-mixins'
+    
+#container
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr))
+    max-width: 120rem
+    margin: 0 auto
+    position: relative
+
+    @include layout-mixins.tablet
+       grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr))
+    
+    @include layout-mixins.desktop
+        grid-template-columns: repeat(auto-fit, minmax(96rem, 1fr))
+
+    

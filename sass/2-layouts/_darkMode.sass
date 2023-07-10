@@ -1,0 +1,67 @@
+@use '../1-base/_variables'
+@use '../2-layouts/layout-mixins'
+
+
+.change-theme
+    transition: .4s
+    #container
+        #main__container
+            #portfolio
+                .section-container__portfolio
+                    .portfolio__arrow-left, .portfolio__arrow-right
+                        color: variables.$colorTextLight
+                        background: linear-gradient(to left, transparent 0%, variables.$lightGrey 300%)
+                    
+                    .portfolio__arrow-right
+                        background: linear-gradient(to right, transparent 0%, variables.$lightGrey 300%)
+
+
+                    .cards-portfolio--wrapper
+                        .cards-portfolio
+                            .card
+                                background-color:#282828
+                                border: 1px solid variables.$color3Pallet
+
+                                .card__project-content
+                                    .card__project-content-title, .card__project-content-description
+                                        color: variables.$colorText
+
+                                .card__project-view
+                                    .card__project-view__btn
+                                        background-color: variables.$color4Pallet
+                                        color: variables.$color2Pallet
+                                        
+                                        &:hover
+                                            transition: .4s
+                                            background-color: variables.$color5Pallet
+                                            color: variables.$color2Pallet
+
+            #skills.main__container__section
+                .text-section__title, .text-section__subtitle, .section__container__skills
+                    color: variables.$colorTextLight
+
+
+                .section__container__skills
+                    .section__hard-skills
+                        .hard-skills
+                            color: variables.$color2Pallet
+            
+            #about.main__container__section
+                .section__container__about-me
+                    .section__text-section
+                        .text-section__title, .text-section__subtitle, .text-section__subtitle__Arthur, .text-section__paragraph
+                            color: variables.$colorTextLight
+
+        #contact.container__contact
+           .text__title
+                color: variables.$colorTextLight
+            
+        .box-contact
+            .contact__img
+                box-shadow: 0 0 1rem variables.$color2Pallet
+            .contact__icons
+                a
+                    i
+                        color: variables.$color2Pallet
+
+                            

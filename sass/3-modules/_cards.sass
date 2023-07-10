@@ -1,0 +1,89 @@
+@use '../1-base/variables'
+@use 'module-mixins'
+@use '../2-layouts/layout-mixins'
+
+.card
+    overflow: hidden
+    padding:0
+    background-color: #BBC3F2
+
+    .project01
+        background-image: url(../imgs/Project_LP-FacebookAds.jpg)
+        background-size: contain
+
+    .project02
+        background-image: url(../imgs/Project_LP-Portfolio.jpg)
+        background-size: contain
+
+    .project03
+        background-image: url(../imgs/Project_My_Resume.jpg)
+        background-size: cover
+
+    .project04
+        background-image: url(../imgs/Project_E-commerce_Sass.jpg)
+        background-size: cover
+
+
+    .card__project-image
+        height: 13rem
+        position: relative
+
+    .card__project-content
+        height: 10rem
+        padding: .5rem
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: center
+
+        .card__project-content-title
+            font-size: 2rem
+            font-weight: bolder
+            margin-bottom: .5rem
+            text-align: center
+            color: variables.$colorTextLight
+
+        .card__project-content-description
+            font-size: 1.2rem
+            text-align: center
+            color: variables.$colorTextLight
+
+            .card__project-content-description__technologies
+                font-size: 1.5rem
+                margin-right: .4rem
+
+                .fa-brands.fa-html5
+                    color: #DD4D25
+
+                .fa-brands.fa-css3-alt
+                    color: #264DE4
+
+                .fa-brands.fa-js
+                    color: #EFD81D
+
+                .fa-brands.fa-react
+                    color: #5ED3F3
+
+                .fa-brands.fa-sass
+                    color: #C76494
+
+    .card__project-view
+        height: 6rem
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-around
+
+        .card__project-view__btn
+            display: inline-block
+            padding: .7rem 1.5rem
+            background-color: variables.$color2Pallet
+            color: variables.$color4Pallet
+            border-radius: 2rem
+
+            &:hover
+                transition: .4s
+                background-color: variables.$color5Pallet
+                color: variables.$color4Pallet
+
+            
