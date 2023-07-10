@@ -452,6 +452,12 @@ section .hard-skills {
 .change-theme #container .box-contact .contact__icons a i {
   color: #3F04BF;
 }
+.change-theme #container #footer__container .container-bottom-bar .footer_text {
+  color: #282828;
+}
+.change-theme #container #footer__container .container-bottom-bar .footer_up-page i {
+  color: #3F04BF;
+}
 
 .section-container__portfolio {
   position: relative;
