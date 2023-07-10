@@ -248,13 +248,13 @@ h2 {
   color: #282828;
 }
 .change-theme #container .header .header__top-header--stick {
-  background-color: rgba(214, 214, 214, 0.5215686275);
+  background-color: rgba(214, 214, 214, 0.7882352941);
   height: 5rem;
   transition: 0.4s;
   box-shadow: 0 0.1rem 2rem #282828;
 }
 .change-theme #container .header__navigation-menu {
-  background-color: rgba(214, 214, 214, 0.5215686275);
+  background-color: rgba(214, 214, 214, 0.7882352941);
   box-shadow: 0 0.1rem 2rem #282828;
 }
 .change-theme #container .header__navigation-menu .navigation-menu__items {
