@@ -27,7 +27,7 @@ const maxItems = items.length;
 
 controls.forEach(control => {
     control.addEventListener("click", () => {
-    const isLeft = control.classList.contains("arrow-left");
+    const isLeft = control.classList.contains("portfolio__arrow-left");
     
         if (isLeft) {
             currentItem -= 1;
@@ -40,7 +40,7 @@ controls.forEach(control => {
         };
 
         if (currentItem < 0) {
-            currentItem -= maxItems - 1;
+            currentItem = maxItems - 1;
         };
 
         items.forEach(item => item.classList.remove('current-card'));

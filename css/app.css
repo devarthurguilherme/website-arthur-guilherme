@@ -465,6 +465,10 @@ section .hard-skills {
   width: 100%;
   padding: 0;
 }
+.section-container__portfolio button {
+  border: none;
+  background-color: transparent;
+}
 .section-container__portfolio .cards-portfolio--wrapper {
   overflow-x: auto;
 }
