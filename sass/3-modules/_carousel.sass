@@ -1,5 +1,6 @@
 @use '../1-base/variables'
 @use 'module-mixins'
+@use '../2-layouts/layout-mixins'
 
 
 .section-container__portfolio
@@ -22,7 +23,9 @@
             display: flex
             flex-flow: row nowrap
             gap: 1.5rem
-            padding: 4rem
+            padding: 4rem 1.5rem
+            @include layout-mixins.desktop
+                padding: 4rem
 
     .portfolio__arrow-left, .portfolio__arrow-right
         position: absolute
@@ -40,6 +43,10 @@
         opacity: .4
         transition: .4s
         z-index: 2
+        display: none
+
+        @include layout-mixins.desktop
+            display: block
 
     .portfolio__arrow-right
         position: absolute
@@ -62,8 +69,14 @@
     &:hover
         opacity: 1
         box-shadow: 0 0 1rem variables.$color2Pallet
+        @include layout-mixins.desktop
+            opacity: .6
    
 .current-card
-    opacity: 1
-    box-shadow: 0 0 1rem variables.$color2Pallet
+    @include layout-mixins.desktop
+        opacity: 1
+        box-shadow: 0 0 1rem variables.$color2Pallet
+
+    
+   
 

@@ -479,7 +479,12 @@ section .hard-skills {
   display: flex;
   flex-flow: row nowrap;
   gap: 1.5rem;
-  padding: 4rem;
+  padding: 4rem 1.5rem;
+}
+@media (min-width: 960px) {
+  .section-container__portfolio .cards-portfolio--wrapper .cards-portfolio {
+    padding: 4rem;
+  }
 }
 .section-container__portfolio .portfolio__arrow-left, .section-container__portfolio .portfolio__arrow-right {
   position: absolute;
@@ -497,6 +502,12 @@ section .hard-skills {
   opacity: 0.4;
   transition: 0.4s;
   z-index: 2;
+  display: none;
+}
+@media (min-width: 960px) {
+  .section-container__portfolio .portfolio__arrow-left, .section-container__portfolio .portfolio__arrow-right {
+    display: block;
+  }
 }
 .section-container__portfolio .portfolio__arrow-right {
   position: absolute;
@@ -521,10 +532,17 @@ section .hard-skills {
   opacity: 1;
   box-shadow: 0 0 1rem #3F04BF;
 }
+@media (min-width: 960px) {
+  .card:hover {
+    opacity: 0.6;
+  }
+}
 
-.current-card {
-  opacity: 1;
-  box-shadow: 0 0 1rem #3F04BF;
+@media (min-width: 960px) {
+  .current-card {
+    opacity: 1;
+    box-shadow: 0 0 1rem #3F04BF;
+  }
 }
 
 .card {
