@@ -40,7 +40,7 @@
         cursor: pointer
         border: none
         background: linear-gradient(to left, transparent 0%, variables.$darkGrey 300%)
-        opacity: .4
+        opacity: 1
         transition: .4s
         z-index: 2
         display: none
@@ -65,12 +65,14 @@
     opacity: .6
     border: 1px solid variables.$color3Pallet
     border-radius: 2rem
+    @include layout-mixins.desktop
+        opacity: 1
 
     &:hover
         opacity: 1
         box-shadow: 0 0 1rem variables.$color2Pallet
         @include layout-mixins.desktop
-            opacity: .6
+            opacity: 1
    
 .current-card
     @include layout-mixins.desktop
